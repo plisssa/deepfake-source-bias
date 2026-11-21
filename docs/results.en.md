@@ -14,6 +14,26 @@ The comparison unit is one feature extractor and one classifier. Each primary gr
 | F | DeepFakeFace test vs. a processing-only comparison on real images | Pearson r = 0.9770 between test and bicubic resize + JPEG control AUC across 31 feature configurations with XGBoost | [Processing control](../results/processing-control.csv) |
 | G | FFHQ originals and SD-derived images, with a separate StyleGAN comparison | Median AUC 0.8842 (VAE), 0.8801 (img2img), 0.7985 (inpaint), 0.7505 (StyleGAN) | [Feature benchmark](../results/feature-benchmark.csv), [transfer matrix](../results/generator-transfer.csv) |
 
+## Transfer across generators
+
+![Train–test matrix for four generators. Median ROC-AUC is 0.538 for VAE to StyleGAN and 0.624 in the reverse direction.](assets/transfer.en.png)
+
+Each cell shows the median test ROC-AUC across ten feature sets with XGBoost. For models trained on VAE reconstructions, the median is 0.998 on img2img and 0.538 on StyleGAN. Rows indicate training, columns indicate testing. [Source data](../results/generator-transfer.csv).
+
+## Preprocessing on DeepFakeFace
+
+![Scatter plots of test and control ROC-AUC. Pearson correlation rises from 0.367 for JPEG alone to 0.977 for resize plus JPEG.](assets/processing.en.png)
+
+Each point is one of 31 handcrafted feature sets with XGBoost. The same detectors are evaluated in both panels. The dashed line marks equal test and control ROC-AUC. The relationship is strongest when real photographs are resized before JPEG compression. [Source data](../results/processing-control.csv).
+
+## Neural detectors on two test sets
+
+![Fourteen measurements across eight model variants. DINOv2 with XGBoost scores 0.9820 on FFHQ / StyleGAN and 0.9342 on DeepFakeFace.](assets/neural.en.png)
+
+Each row represents one model and training configuration. Circles mark FFHQ / StyleGAN (6,000 test images) and diamonds mark DeepFakeFace (5,967). Both ViT-Tiny variants were evaluated only on FFHQ / StyleGAN. [Source data](../results/neural-baselines.csv).
+
+Regenerate these three figures with `python analysis/plot_experiments.py --lang en` using Matplotlib and NumPy.
+
 ## Reading the CSV files
 
 - **Feature benchmark.** One row per condition, feature and classifier. The 600 rows cover eight primary grids: A, C, D, the DeepFakeFace test (tagged `F-test`) and the four G arms. The named conditions B and E are separate controls. The export retains only completed holdout measurements. Each score was checked against its source tracking record.

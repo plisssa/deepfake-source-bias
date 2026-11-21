@@ -10,6 +10,14 @@ An evaluation of how image provenance and preprocessing affect face deepfake det
 
 The **same StyleGAN test images** produced markedly different scores depending on the real comparison set. The median test ROC-AUC was **0.9996** against CelebA and **0.7837** against FFHQ. A control using only real FFHQ photographs, processed in two different ways, reached **0.9844**. Each row in the figure summarizes variation across detector configurations at seed 42.
 
+## Transfer across generators
+
+![Train–test matrix for four generators. Median ROC-AUC is 0.538 for VAE to StyleGAN and 0.624 in the reverse direction.](docs/assets/transfer.en.png)
+
+Each cell shows the median test ROC-AUC across ten feature sets with XGBoost. For models trained on VAE reconstructions, the median is 0.998 on img2img and 0.538 on StyleGAN. Rows indicate training, columns indicate testing.
+
+[Plots for preprocessing and neural detectors](docs/results.en.md).
+
 ## Quick start
 
 Recalculate the summaries from the published per-configuration metrics. Python 3.10+ is sufficient. The command runs offline and uses the standard library.
