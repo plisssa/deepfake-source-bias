@@ -1,0 +1,29 @@
+name: rob1_fusion
+
+components:
+  - kind: freq
+    name: freq
+    cfg:
+      img_size: 256
+      n_bins: 8
+      include_slope: true
+      include_flatness: true
+      include_basic_stats: true
+  - kind: lbp
+    name: lbp
+    cfg:
+      img_size: 256
+      radii: [1, 2]
+      method: uniform
+  - kind: color
+    name: color
+    cfg:
+      img_size: 256
+      patch_sizes: [32]
+      colorspace: YCbCr
+      full_stats: true
+
+fusion:
+  scale: true
+  variance_threshold: 0.0      # null чтобы отключить
+  pca_components: 64           # null → без PCA; float 0..1 → доля дисперсии

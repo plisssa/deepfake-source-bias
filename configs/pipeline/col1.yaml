@@ -1,0 +1,5 @@
+name: col1
+img_size: 256
+n_bins: 32
+colorspace: HSV          # RGB | HSV | YCbCr | Lab
+patch_grid: 1

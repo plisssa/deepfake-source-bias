@@ -1,0 +1,4 @@
+name: freq2
+img_size: 256
+block_size: 8          # 8 (JPEG-совместимо) или 16
+log_scale: true        # log1p(|x|)·sign(x) к коэффициентам

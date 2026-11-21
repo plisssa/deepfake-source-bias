@@ -1,0 +1,34 @@
+mode: optuna                 # 'uniform' | 'logreg' | 'optuna'
+optuna_n_trials: 100
+
+components:
+  - pipeline: col2
+    pipeline_cfg:
+      img_size: 256
+      patch_sizes: [16, 32]
+      colorspace: RGB
+      full_stats: true
+    model:
+      name: xgboost
+      params: {}
+
+  - pipeline: freq4
+    pipeline_cfg:
+      img_size: 256
+      n_bins: 8
+      include_slope: true
+      include_flatness: true
+      include_basic_stats: true
+      use_gan_augment: false
+    model:
+      name: xgboost
+      params: {}
+
+  - pipeline: tex2
+    pipeline_cfg:
+      img_size: 256
+      radii: [1, 2, 3]
+      method: uniform
+    model:
+      name: random_forest
+      params: {}

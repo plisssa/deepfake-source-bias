@@ -1,0 +1,5 @@
+name: grad2
+img_size: 256
+patch_grid: 4
+n_orient_bins: 9
+threshold: null         # if not null — обнуляет magnitude ниже порога

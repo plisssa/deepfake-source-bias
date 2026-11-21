@@ -1,0 +1,7 @@
+name: grad4
+mode: patch                 # 'patch' (рекомендовано) | 'flatten' (baseline)
+img_size: 256
+sigma: 1.2                  # 0.7 давала карту, почти полностью определяемую шумом
+zc_threshold: 0.5           # порог Marr-Hildreth на амплитуду zero-crossing
+patch_size: 16
+full_stats: true

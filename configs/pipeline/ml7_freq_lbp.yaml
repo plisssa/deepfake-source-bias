@@ -1,0 +1,5 @@
+name: ml7_freq_lbp
+img_size: 256
+freq_n_bins: 8
+lbp_radii: [1, 2]
+lbp_method: uniform

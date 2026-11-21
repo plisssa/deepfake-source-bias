@@ -1,0 +1,10 @@
+feature,head,roc_auc
+col2,xgboost,0.9996259999999999
+ela,xgboost,0.9842360000000001
+freq2,xgboost,0.992894
+freq4,xgboost,0.9950967500000001
+ml6_hybrid,xgboost,0.99981275
+ml7_freq_lbp,xgboost,0.99818425
+noise1,xgboost,0.9988082500000001
+tex2,xgboost,0.9969817500000001
+tex3,xgboost,0.999212

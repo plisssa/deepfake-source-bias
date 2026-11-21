@@ -1,0 +1,7 @@
+name: k5_stratified
+type: kfold
+
+n_splits: 5
+stratify: true
+
+test_size: 0.15

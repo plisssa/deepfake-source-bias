@@ -1,0 +1,5 @@
+name: noise3
+img_size: 256
+denoise_method: nlmeans
+denoise_strength: 8.0
+patch_grid: 2

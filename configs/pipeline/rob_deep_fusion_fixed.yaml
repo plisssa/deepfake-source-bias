@@ -1,0 +1,18 @@
+name: rob1_fusion
+components:
+  - kind: deep
+    name: vit
+    cfg: {backbone: vit_tiny_patch16_224, img_size: 224, batch_size: 32, resize_mode: center_crop, normalize: model}
+  - kind: freq
+    name: hf
+    cfg: {n_bins: 8}
+  - kind: lbp
+    name: lbp
+    cfg: {radii: [1, 2], method: uniform}
+  - kind: gabor
+    name: gabor
+    cfg: {}
+fusion:
+  scale: true
+  variance_threshold: 0.0
+  pca_components: 128

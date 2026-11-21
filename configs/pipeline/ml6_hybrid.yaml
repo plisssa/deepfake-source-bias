@@ -1,0 +1,9 @@
+name: ml6_hybrid
+img_size: 256
+
+color_patch_sizes: [16, 32]
+colorspace: YCbCr            # ML-6 в таблице ориентирован на color+texture устойчивость
+color_full_stats: true
+
+lbp_radii: [1, 2]
+lbp_method: uniform

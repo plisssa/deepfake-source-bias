@@ -1,0 +1,18 @@
+name: pairs_inpaint
+splits_builder: build_pairs
+real_sources:
+  - name: real_p
+    path: ${paths.repo_root}/data/raw/pairs_v2/real
+    use_subfolders: false
+    group_mode: regex
+    group_regex: '/([^/]+)\.jpg$'
+    group_namespace: ffhq_src
+fake_sources:
+  - name: inpaint_p
+    path: ${paths.repo_root}/data/raw/pairs_v2/inpaint
+    use_subfolders: false
+    group_mode: regex
+    group_regex: '/([^/]+)\.jpg$'
+    group_namespace: ffhq_src
+
+splits_version: v2

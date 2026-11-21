@@ -1,0 +1,6 @@
+name: freq1
+img_size: 256
+radial_bins: 16
+angular_bins: 8
+window: hann           # 'hann' | 'none'
+include_phase: true    # + radial_bins признаков когерентности фазы

@@ -1,0 +1,6 @@
+name: tex6
+img_size: 256
+distances: [1, 2, 3]
+angles: null
+levels: 32
+patch_grid: 1            # >1 — рассечь на сетку

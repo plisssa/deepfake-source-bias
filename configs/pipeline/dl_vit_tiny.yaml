@@ -1,0 +1,11 @@
+name: dl_vit_tiny
+backbone: vit_tiny_patch16_224
+pretrained: true
+num_classes: 2
+img_size: 224
+epochs: 5
+batch_size: 32
+lr: 0.0005
+weight_decay: 0.0001
+num_workers: 4
+device: auto

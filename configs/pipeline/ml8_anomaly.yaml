@@ -1,0 +1,12 @@
+name: ml8_anomaly
+features: prnu              # 'prnu' (NOISE-3) или 'srm' (NOISE-1 без residual)
+img_size: 256
+denoise_method: nlmeans
+denoise_strength: 8.0
+patch_grid: 2
+
+oc_params:
+  nu: 0.1                   # ожидаемая доля выбросов
+  kernel: rbf
+  gamma: scale
+  with_scaler: true

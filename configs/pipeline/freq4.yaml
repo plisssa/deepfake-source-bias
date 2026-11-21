@@ -1,0 +1,14 @@
+name: freq4
+img_size: 256
+n_bins: 8                  # вместо 5 (закрытие «только 7 признаков»)
+include_slope: true
+include_flatness: true
+include_basic_stats: true
+
+use_gan_augment: false
+gan_intensity: 0.02
+augment_times: 1
+
+staged_mode: none          # 'none' | 'staged' | 'continual' (перенос весов)
+n_stages: 3
+lr_schedule: warmup_cosine # 'warmup_cosine' | 'step_decay' | 'none'

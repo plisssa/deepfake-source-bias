@@ -1,0 +1,6 @@
+name: deep_lp
+backbone: vit_large_patch14_clip_224.openai
+img_size: 224
+resize_mode: center_crop
+normalize: model
+batch_size: 64

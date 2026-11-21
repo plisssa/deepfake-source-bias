@@ -1,0 +1,3 @@
+name: mlflow_ctrl
+tracking_uri: sqlite:///${paths.repo_root}/mlflow_ctrl.db
+experiment_name: deepfake_source_bias

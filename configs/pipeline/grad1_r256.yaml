@@ -1,0 +1,6 @@
+name: grad1
+img_size: 256
+ksize: 3                # Sobel kernel size 3 or 5
+patch_grid: 4
+n_orient_bins: 9
+threshold: null         # if not null — обнуляет magnitude ниже порога

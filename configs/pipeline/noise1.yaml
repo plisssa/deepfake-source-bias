@@ -1,0 +1,7 @@
+name: noise1
+img_size: 256
+denoise_method: nlmeans     # 'nlmeans' | 'median' | 'bm3d'
+denoise_strength: 10.0
+use_srm: true               # 6 SRM high-pass kernels
+use_residual: true          # img - denoise(img)
+patch_grid: 2               # statistics per patch_grid x patch_grid blocks

@@ -1,0 +1,58 @@
+name: cross_gan_dm
+train:
+  real_sources:
+    - name: wiki_real_norm_even
+      path: ${paths.repo_root}/data/raw/dm_norm/wiki
+      max_samples: 9000
+      use_subfolders: false
+      group_mode: regex
+      group_regex: '/\d{6}_(\d+)_\d{4}-\d{2}-\d{2}_\d{4}\.jpg$'
+      group_namespace: wiki_person
+      hash_split: even
+      hash_split_by: group
+  fake_sources:
+    - name: stylegan140k_norm
+      path: ${paths.repo_root}/data/raw/dm_norm/stylegan140k
+      max_samples: 9000
+      use_subfolders: false
+test:
+  real_sources:
+    - name: wiki_real_norm_odd
+      path: ${paths.repo_root}/data/raw/dm_norm/wiki
+      max_samples: 5000
+      use_subfolders: false
+      group_mode: regex
+      group_regex: '/\d{6}_(\d+)_\d{4}-\d{2}-\d{2}_\d{4}\.jpg$'
+      group_namespace: wiki_person
+      hash_split: odd
+      hash_split_by: group
+  fake_sources:
+    - name: dff_text2img_norm
+      path: ${paths.repo_root}/data/raw/dm_norm/text2img
+      max_samples: 1700
+      use_subfolders: false
+      group_mode: regex
+      group_regex: '/\d{6}_(\d+)_\d{4}-\d{2}-\d{2}_\d{4}\.jpg$'
+      group_namespace: wiki_person
+      hash_split: odd
+      hash_split_by: group
+    - name: dff_inpainting_norm
+      path: ${paths.repo_root}/data/raw/dm_norm/inpainting
+      max_samples: 1700
+      use_subfolders: false
+      group_mode: regex
+      group_regex: '/\d{6}_(\d+)_\d{4}-\d{2}-\d{2}_\d{4}\.jpg$'
+      group_namespace: wiki_person
+      hash_split: odd
+      hash_split_by: group
+    - name: dff_insight_norm
+      path: ${paths.repo_root}/data/raw/dm_norm/insight
+      max_samples: 1700
+      use_subfolders: false
+      group_mode: regex
+      group_regex: '/\d{6}_(\d+)_\d{4}-\d{2}-\d{2}_\d{4}\.jpg$'
+      group_namespace: wiki_person
+      hash_split: odd
+      hash_split_by: group
+
+splits_version: v3

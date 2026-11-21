@@ -1,0 +1,5 @@
+name: col3
+img_size: 256
+n_bins: 32
+patch_grid: 4
+full_stats: true

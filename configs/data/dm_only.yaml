@@ -1,0 +1,33 @@
+name: dm_only
+real_sources:
+  - name: wiki_real_norm
+    path: ${oc.env:DATA_DM_REAL_DIR,${paths.repo_root}/data/raw/dm_norm/wiki}
+    max_samples: 20000
+    use_subfolders: false
+    group_mode: regex
+    group_regex: '/\d{6}_(\d+)_\d{4}-\d{2}-\d{2}_\d{4}\.jpg$'
+    group_namespace: wiki_person
+fake_sources:
+  - name: dff_text2img_norm
+    path: ${oc.env:DATA_DM_FAKE_DIR,${paths.repo_root}/data/raw/dm_norm/text2img}
+    max_samples: 7000
+    use_subfolders: false
+    group_mode: regex
+    group_regex: '/\d{6}_(\d+)_\d{4}-\d{2}-\d{2}_\d{4}\.jpg$'
+    group_namespace: wiki_person
+  - name: dff_inpainting_norm
+    path: ${paths.repo_root}/data/raw/dm_norm/inpainting
+    max_samples: 7000
+    use_subfolders: false
+    group_mode: regex
+    group_regex: '/\d{6}_(\d+)_\d{4}-\d{2}-\d{2}_\d{4}\.jpg$'
+    group_namespace: wiki_person
+  - name: dff_insight_norm
+    path: ${paths.repo_root}/data/raw/dm_norm/insight
+    max_samples: 7000
+    use_subfolders: false
+    group_mode: regex
+    group_regex: '/\d{6}_(\d+)_\d{4}-\d{2}-\d{2}_\d{4}\.jpg$'
+    group_namespace: wiki_person
+
+splits_version: v3

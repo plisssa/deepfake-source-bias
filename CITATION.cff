@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "При использовании кода или сводных результатов исследования укажите автора и ссылку на репозиторий."
+title: "Deepfake Source Bias"
+type: software
+authors:
+  - family-names: Puzyreva
+    given-names: Elizaveta
+repository-code: "https://github.com/plisssa/deepfake-source-bias"
+license: MIT

@@ -1,0 +1,7 @@
+name: deep_lp
+backbone: vit_base_patch14_dinov2.lvd142m
+img_size: 224
+model_img_size: 224
+resize_mode: center_crop
+normalize: model
+batch_size: 64

@@ -1,0 +1,31 @@
+defaults:
+  - _self_
+  - data: default
+  - pipeline: col2
+  - model: xgboost
+  - cv: holdout
+  - tuning: none
+  - tracking: mlflow_local
+  - experiment: null
+
+seed: 42
+
+paths:
+  repo_root: ${oc.env:PROJECT_ROOT,${hydra:runtime.cwd}}
+  splits_dir: ${paths.repo_root}/data/splits
+  cache_dir: ${paths.repo_root}/data/processed/cache
+  reports_dir: ${paths.repo_root}/reports
+
+logging:
+  level: INFO
+
+cross_dataset: false
+
+hydra:
+  job:
+    chdir: false
+  run:
+    dir: outputs/${now:%Y-%m-%d}/${now:%H-%M-%S}
+  sweep:
+    dir: multirun/${now:%Y-%m-%d}/${now:%H-%M-%S}
+    subdir: ${hydra.job.num}

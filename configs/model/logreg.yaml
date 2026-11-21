@@ -1,0 +1,7 @@
+name: logreg
+params:
+  C: 1.0
+  penalty: l2
+  solver: lbfgs
+  max_iter: 2000
+  class_weight: balanced

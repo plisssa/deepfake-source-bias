@@ -1,0 +1,6 @@
+name: tex1
+img_size: 256
+radii: [1]                  # одиночный LBP, один радиус
+n_points: null              # auto = 8 * r
+method: uniform             # canonical uniform LBP
+block_grid: null            # если задано, например 4 — гистограммы по 4x4 блокам

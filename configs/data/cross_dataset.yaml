@@ -1,0 +1,27 @@
+name: cross_dataset
+
+train:
+  real_sources:
+    - name: archive_train
+      path: ${oc.env:DATA_REAL_DIR,${paths.repo_root}/data/raw/archive/images/train}
+      max_samples: 20000
+      use_subfolders: false
+  fake_sources:
+    - name: redface
+      path: ${oc.env:DATA_FAKE_DIR,${paths.repo_root}/data/raw/RedFace}
+      max_samples: null
+      use_subfolders: true
+
+test:
+  real_sources:
+    - name: ffhq
+      path: ${oc.env:DATA_REAL_FFHQ_DIR,${paths.repo_root}/data/raw/FFHQ}
+      max_samples: 5000
+      use_subfolders: false
+  fake_sources:
+    - name: diffusion_face
+      path: ${oc.env:DATA_FAKE_DIFF_DIR,${paths.repo_root}/data/raw/DiffusionFace}
+      max_samples: 5000
+      use_subfolders: true
+
+splits_version: v1

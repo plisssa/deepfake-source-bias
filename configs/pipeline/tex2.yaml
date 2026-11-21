@@ -1,0 +1,6 @@
+name: tex2
+img_size: 256
+radii: [1, 2, 3]            # multi-scale
+n_points: null              # auto = 8 * r
+method: uniform             # 'uniform' (canonical) | 'default' | 'ror' | 'simple' (legacy)
+block_grid: null            # если задано, например 4 — гистограммы по 4x4 блокам

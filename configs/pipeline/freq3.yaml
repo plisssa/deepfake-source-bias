@@ -1,0 +1,4 @@
+name: freq3
+img_size: 256
+wavelet: db2           # Haar / db2..db8 / sym2..sym8 / coif1..coif5 / bior...
+level: 3

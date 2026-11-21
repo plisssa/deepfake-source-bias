@@ -1,0 +1,4 @@
+name: freq5
+img_size: 256
+wavelet: morl          # 'morl' (Morlet) | 'mexh' (Mexican Hat)
+scales: [2, 4, 8, 16]

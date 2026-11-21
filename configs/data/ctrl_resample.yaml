@@ -1,0 +1,11 @@
+name: ctrl_resample
+splits_builder: make_control_sets
+real_sources:
+  - name: as_real_A
+    path: ${paths.repo_root}/data/raw/ctrl_resample/as_real_A
+    use_subfolders: false
+fake_sources:
+  - name: as_fake_A
+    path: ${paths.repo_root}/data/raw/ctrl_resample/as_fake_A
+    use_subfolders: false
+splits_version: v1

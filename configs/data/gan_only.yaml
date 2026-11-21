@@ -1,0 +1,13 @@
+name: gan_only
+real_sources:
+  - name: flickr_real_140k
+    path: ${oc.env:DATA_GAN_REAL_DIR,${paths.repo_root}/data/raw/real_fake_140k/real_vs_fake/real-vs-fake/train/real}
+    max_samples: 20000
+    use_subfolders: false
+fake_sources:
+  - name: stylegan_140k
+    path: ${oc.env:DATA_GAN_FAKE_DIR,${paths.repo_root}/data/raw/real_fake_140k/real_vs_fake/real-vs-fake/train/fake}
+    max_samples: 20000
+    use_subfolders: false
+
+splits_version: v1

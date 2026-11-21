@@ -1,0 +1,5 @@
+name: col2
+img_size: 256
+patch_sizes: [8, 16, 32]   # multi-scale закрытие замечания
+colorspace: RGB             # RGB | HSV | YCbCr | Lab
+full_stats: true            # включает kurtosis, entropy, percentiles

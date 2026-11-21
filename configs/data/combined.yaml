@@ -1,0 +1,21 @@
+name: combined
+real_sources:
+  - name: celeba_real
+    path: ${oc.env:DATA_GAN_REAL_DIR,${paths.repo_root}/data/raw/celeba}
+    max_samples: 15000
+    use_subfolders: true
+  - name: lfw_real
+    path: ${oc.env:DATA_REAL2_DIR,${paths.repo_root}/data/raw/lfw}
+    max_samples: 10000
+    use_subfolders: true
+fake_sources:
+  - name: stylegan_140k
+    path: ${oc.env:DATA_GAN_FAKE_DIR,${paths.repo_root}/data/raw/real_fake_140k/real_vs_fake/real-vs-fake/train/fake}
+    max_samples: 12500
+    use_subfolders: false
+  - name: dff_diffusion
+    path: ${oc.env:DATA_DM_FAKE_DIR,${paths.repo_root}/data/raw/dff}
+    max_samples: 12500
+    use_subfolders: true
+
+splits_version: v1

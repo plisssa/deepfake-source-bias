@@ -1,0 +1,25 @@
+name: cross_src_check
+train:
+  real_sources:
+    - name: flickr_real_140k
+      path: ${oc.env:DATA_GAN_REAL_DIR,${paths.repo_root}/data/raw/real_fake_140k/real_vs_fake/real-vs-fake/train/real}
+      max_samples: 15000
+      use_subfolders: false
+  fake_sources:
+    - name: stylegan_140k
+      path: ${oc.env:DATA_GAN_FAKE_DIR,${paths.repo_root}/data/raw/real_fake_140k/real_vs_fake/real-vs-fake/train/fake}
+      max_samples: 15000
+      use_subfolders: false
+test:
+  real_sources:
+    - name: celeba_real_ood
+      path: ${oc.env:DATA_CELEBA_DIR,${paths.repo_root}/data/raw/celeba}
+      max_samples: 5000
+      use_subfolders: true
+  fake_sources:
+    - name: stylegan_140k_valid
+      path: ${oc.env:DATA_GAN_FAKE_VALID_DIR,${paths.repo_root}/data/raw/real_fake_140k/real_vs_fake/real-vs-fake/valid/fake}
+      max_samples: 5000
+      use_subfolders: false
+
+splits_version: v1

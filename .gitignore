@@ -1,0 +1,81 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.tox/
+.venv/
+venv/
+env/
+
+# --- IDE / OS ---
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# --- Jupyter ---
+.ipynb_checkpoints/
+
+# --- ML artifacts ---
+mlruns/
+mlartifacts/
+*.pkl
+*.joblib
+*.h5
+*.onnx
+.cache/
+features_cache/
+data/raw/*
+!data/raw/.gitkeep
+data/aug/
+data/processed/
+reports/figures/*.png
+reports/figures/*.jpg
+!reports/figures/.gitkeep
+reports/tables/*.csv
+!reports/tables/.gitkeep
+
+# --- Secrets / env ---
+.env
+.env.local
+*.pem
+
+# --- Logs ---
+logs/
+*.log
+outputs/
+multirun/
+
+# --- Docker ---
+*.swp
+infra/mlflow/data/
+infra/mlflow/minio/
+
+# Local experiment stores and generated products
+*.db
+*.db-shm
+*.db-wal
+catboost_info/
+mlruns*/
+runs/
+
+# Raw corpora, generated manifests and run artifacts belong outside the source tree.
+data/splits/
+reports/
+*.docx
+*.pt
+*.pth
+*.ckpt
+*.sqlite*
+*.npz

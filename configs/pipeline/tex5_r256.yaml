@@ -1,0 +1,7 @@
+name: tex5
+img_size: 256
+orientations: [0, 45, 90, 135]   # градусы
+wavelengths: [4, 8, 16]          # lambda; sigma = 0.56 * lambda
+gamma: 0.5
+psi: 0.0
+patch_grid: 1                    # >1 — статистики по сетке патчей, как в GLCM

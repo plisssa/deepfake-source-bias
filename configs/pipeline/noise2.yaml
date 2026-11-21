@@ -1,0 +1,4 @@
+name: noise2
+img_size: 256
+block_size: 8
+patch_grid: 4

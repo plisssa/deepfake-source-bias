@@ -1,0 +1,11 @@
+name: celeba_vs_140k
+splits_builder: make_control_sets
+real_sources:
+  - name: celeba_real
+    path: ${paths.repo_root}/data/raw/celeba/img_align_celeba/img_align_celeba
+    use_subfolders: false
+fake_sources:
+  - name: stylegan_140k
+    path: ${paths.repo_root}/data/raw/real_fake_140k/real_vs_fake/real-vs-fake/train/fake
+    use_subfolders: false
+splits_version: v2
