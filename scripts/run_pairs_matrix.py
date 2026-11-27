@@ -13,7 +13,7 @@
 И парная метрика для SD-генераторов (фейк сделан из того же кадра, что реальный):
     pair_win — доля пар, где фейк получил балл выше СВОЕГО реального кадра.
 
-    python -m scripts.run_pairs_matrix pipeline=col2 model=xgboost tracking=mlflow_pairs +pairs.version=v2
+    python -m scripts.run_pairs_matrix pipeline=col2 model=xgboost +pairs.version=v2
 """
 
 from __future__ import annotations

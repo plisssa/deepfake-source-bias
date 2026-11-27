@@ -1,3 +1,0 @@
-name: mlflow_a2
-tracking_uri: sqlite:///${paths.repo_root}/mlflow_a2.db
-experiment_name: deepfake_source_bias
