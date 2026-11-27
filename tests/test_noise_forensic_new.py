@@ -12,6 +12,13 @@ from deepfakes.features.noise import JPEGBlockinessExtractor, PRNUExtractor
 RNG = np.random.default_rng(42)
 
 
+@pytest.fixture(autouse=True)
+def _reset_rng():
+    """Одинаковые входные данные в каждом тесте независимо от порядка запуска."""
+    global RNG
+    RNG = np.random.default_rng(42)
+
+
 def _noise_gray(size: int = 64) -> np.ndarray:
     return RNG.normal(128, 20, (size, size)).clip(0, 255).astype(np.uint8)
 

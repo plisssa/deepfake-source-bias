@@ -1,9 +1,18 @@
 cff-version: 1.2.0
 message: "При использовании кода или сводных результатов исследования укажите автора и ссылку на репозиторий."
 title: "Deepfake Source Bias"
+abstract: "Влияние источника реальных фотографий и их обработки на качество детекторов дипфейков: 25 наборов признаков с тремя классификаторами, нейросетевые модели CLIP, DINOv2, ResNet-50 и ViT-Tiny, контрольные эксперименты и перенос между генераторами."
 type: software
 authors:
   - family-names: Puzyreva
     given-names: Elizaveta
+version: 1.0.0
+date-released: 2026-11-26
 repository-code: "https://github.com/plisssa/deepfake-source-bias"
 license: MIT
+keywords:
+  - deepfake detection
+  - dataset bias
+  - image forensics
+  - computer vision
+  - reproducible research

@@ -18,7 +18,7 @@ The comparison unit is one feature extractor and one classifier. Each primary gr
 
 ![Train–test matrix for four generators. Median ROC-AUC is 0.538 for VAE to StyleGAN and 0.624 in the reverse direction.](assets/transfer.en.png)
 
-Each cell shows the median test ROC-AUC across ten feature sets with XGBoost. For models trained on VAE reconstructions, the median is 0.998 on img2img and 0.538 on StyleGAN. Rows indicate training, columns indicate testing. [Source data](../results/generator-transfer.csv).
+Each cell shows the median test ROC-AUC across ten feature sets with XGBoost. For models trained on VAE reconstructions, the median is 0.998 on img2img and 0.538 on StyleGAN. Rows indicate training, columns indicate testing. The diagonal is higher than the condition G medians in the table above because the matrix covers only the ten XGBoost feature sets, while the table uses all 75 configurations. [Source data](../results/generator-transfer.csv).
 
 ## Preprocessing on DeepFakeFace
 

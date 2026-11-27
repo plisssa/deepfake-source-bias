@@ -1,4 +1,4 @@
 feature,head,geometry_auc,filesize_auc,shuffled_auc
-col2,xgboost,1.0,1.0,0.49482467777777783
-freq4,xgboost,1.0,1.0,0.49187412222222215
-tex2,xgboost,1.0,1.0,0.49085026111111113
+col2,xgboost,1,1,0.494825
+freq4,xgboost,1,1,0.491874
+tex2,xgboost,1,1,0.49085

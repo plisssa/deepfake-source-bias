@@ -3,8 +3,8 @@ requires = ["setuptools>=68", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "deepfakes-bench"
-version = "0.1.0"
+name = "deepfake-source-bias"
+version = "1.0.0"
 description = "Влияние источника данных и обработки изображений на качество детекторов дипфейков"
 readme = "README.md"
 requires-python = ">=3.10"

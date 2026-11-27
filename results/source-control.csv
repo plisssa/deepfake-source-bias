@@ -1,10 +1,10 @@
 feature,head,roc_auc
-col2,xgboost,0.9996259999999999
-ela,xgboost,0.9842360000000001
+col2,xgboost,0.999626
+ela,xgboost,0.984236
 freq2,xgboost,0.992894
-freq4,xgboost,0.9950967500000001
-ml6_hybrid,xgboost,0.99981275
-ml7_freq_lbp,xgboost,0.99818425
-noise1,xgboost,0.9988082500000001
-tex2,xgboost,0.9969817500000001
+freq4,xgboost,0.995097
+ml6_hybrid,xgboost,0.999813
+ml7_freq_lbp,xgboost,0.998184
+noise1,xgboost,0.998808
+tex2,xgboost,0.996982
 tex3,xgboost,0.999212

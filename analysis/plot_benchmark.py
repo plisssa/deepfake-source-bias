@@ -55,8 +55,8 @@ if __name__ == "__main__":
     values = benchmark()
     fig, axes = plt.subplots(1, 2, figsize=(13, 3.6), facecolor="white")
     fig.subplots_adjust(left=.146, right=.94, top=.81, bottom=.31, wspace=.94)
-    panel(axes[0], values, ["A", "C", "D"],
-          ["CelebA / StyleGAN", processing, "FFHQ / StyleGAN"], TEAL, titles[0], lang)
+    panel(axes[0], values, ["A", "D", "C"],
+          ["CelebA / StyleGAN", "FFHQ / StyleGAN", processing], TEAL, titles[0], lang)
     panel(axes[1], values, ["G-vae", "G-img2img", "G-inpaint", "G-stylegan"],
           generators, OCHRE, titles[1], lang)
     fig.text(.5, .075, legend, ha="center", color=SUBTLE, fontsize=10)
